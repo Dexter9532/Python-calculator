@@ -1,6 +1,6 @@
 # Calculator program
 
-from functions import add
+from lib.functions import std
 
 def main():
     running = False
@@ -12,15 +12,16 @@ def main():
         mode = input("Mode: ")
         if mode == "std" or mode == "" and last_mode == "std":
             a = float(input("a: "))
-            function = input("Op ")
+            operation = input("Op ")
             b = float(input("b: "))
-            result = add(a, b)
+            result = std(a, b, operation)
             print(f"= {result}")
             last_mode = mode
         elif state == "q":
             print("Exiting the calculator program.")
             running = False
-            break
-
+        elif mode == "exit" or mode == "quit":
+            print("Exiting the calculator program.")
+            running = False
 if __name__ == "__main__":
     main()
