@@ -23,7 +23,11 @@ def main():
         if mode == "std" or (mode == "" and last_mode == "std"):
             std()
             last_mode = "std"
-
+        
+        if mode == "dec to bin" or (mode == "" and last_mode == "dec to bin"):
+            dec_to_bin()
+            last_mode = "dec to bin"
+            
         # Manual
         elif mode == "man" or (mode == "" and last_mode == "man"):
             man()
