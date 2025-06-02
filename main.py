@@ -1,8 +1,8 @@
 # Calculator program
 
-from lib.calculate import calc_std
+from lib.calculate import calc_std , calc_dec_to_bin
 from lib.manuals import man
-from lib.mode import std
+from lib.mode import std, dec_to_bin
 
 def main():
     running = False
@@ -24,7 +24,7 @@ def main():
             std()
             last_mode = "std"
         
-        if mode == "dec to bin" or (mode == "" and last_mode == "dec to bin"):
+        elif mode == "dec to bin" or (mode == "" and last_mode == "dec to bin"):
             dec_to_bin()
             last_mode = "dec to bin"
             
