@@ -16,8 +16,11 @@ def calc_std(a, b, operation):
             return "Error: Division by zero"
     else:
         return "Error: Invalid operation" 
+#def calc_std1_1(tot_operation):
+    
+    for i in tot_operation
 
-# converting decimal to binary
+
 def calc_dec_to_bin(dec):
     bin = "" 
     while dec > 0:
