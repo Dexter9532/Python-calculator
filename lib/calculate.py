@@ -25,6 +25,17 @@ def calc_dec_to_bin(dec):
         dec = dec // 2
     return bin
 
-#def calc_bin_to_bin(bin):
+def calc_bin_to_dec(bin_input):
 
+    bin_list = list(bin_input)
+    bin_list.reverse()
+
+    length = len(bin_input)
+    result = 0
+
+    for i in range(length):
+        value = int(bin_list[i])
+        result += value * (2 **(i))
+    return result
+        
 

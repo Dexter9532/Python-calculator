@@ -3,9 +3,9 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from lib.calculate import calc_std, calc_dec_to_bin
+from lib.calculate import calc_std, calc_dec_to_bin, calc_bin_to_dec
 from lib.manuals import man
-from lib.mode import std, dec_to_bin
+from lib.mode import std, dec_to_bin, bin_to_dec
 
 def main():
     running = False
@@ -30,7 +30,11 @@ def main():
         elif mode == "dec to bin" or (mode == "" and last_mode == "dec to bin"):
             dec_to_bin()
             last_mode = "dec to bin"
-            
+        
+        elif mode == "bin to dec" or (mode == "" and last_mode == "bin to dec"):
+            bin_to_dec()
+            last_mode = "bin to dec"
+
         # Manual
         elif mode == "man" or (mode == "" and last_mode == "man"):
             man()
