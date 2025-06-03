@@ -18,7 +18,7 @@ def calc_std(a, b, operation):
         return "Error: Invalid operation" 
 #def calc_std1_1(tot_operation):
     
-    for i in tot_operation
+    #for i in tot_operation
 
 
 def calc_dec_to_bin(dec):
